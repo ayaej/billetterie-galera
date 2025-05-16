@@ -10,19 +10,18 @@ Le frontend est une application React.
 
 ## Structure du projet
 event-booking-project/
-├── backend/ # Backend Flask
+├── backend/ 
 │ ├── app.py
 │ ├── Dockerfile
 │ ├── requirements.txt
 │ └── ...
-├── frontend/ # Frontend React
+├── frontend/ 
 │ ├── package.json
 │ ├── src/
 │ ├── public/
 │ └── ...
-├── docker-compose.yml # Compose pour cluster MariaDB, API Flask, Adminer
-└── README.md # Cette documentation
-
+├── docker-compose.yml 
+└── README.md 
 
 ---
 
@@ -38,8 +37,7 @@ event-booking-project/
 
 1. Lancer les services Docker :
 
-```bash
-docker compose up --build -d
+-docker compose up --build -d
 
 Cela démarre le cluster MariaDB Galera, l’API Flask et Adminer.
 
@@ -59,11 +57,11 @@ API Flask : http://localhost:5001
 Interface Adminer (gestion base) : http://localhost:8080
 
 Fonctionnalités principales
-Liste des événements
+Consultation des événements et utilisateurs
 
-Création de réservation (depuis le frontend)
+Réservation de places avec formulaire interactif
 
-Gestion des données sur un cluster MariaDB Galera
+Gestion du failover live via MariaDB Galera
 
 Notes importantes
 Assurez-vous que les ports 3000, 5001, 8080 et 3307-3309 ne sont pas utilisés par d’autres services.
